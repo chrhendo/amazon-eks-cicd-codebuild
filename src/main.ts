@@ -17,7 +17,7 @@ export class DemoStack extends cdk.Stack {
     const cluster = new eks.Cluster(this, 'Cluster', {
       vpc,
       version: eks.KubernetesVersion.V1_18,
-      defaultCapacity: 2,
+      defaultCapacity: 4,
     });
 
     const ecrRepo = new ecr.Repository(this, 'EcrRepo');
